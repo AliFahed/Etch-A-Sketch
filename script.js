@@ -1,14 +1,13 @@
-const container = document.querySelector('.container');
+function grid(size) {
+  const container = document.querySelector('.container');
+  container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
-function grid(rows, cols) {
-  container.style.setProperty('--grid-rows', rows);
-  container.style.setProperty('--grid-cols', cols);
-
-  for (size = 0; size < (rows * cols); size++) {
+  for (let i = 0; i < 256; i++) {
     let cell = document.createElement('div');
-    cell.textContent = (size + 1);
-    container.appendChild(cell).className = 'grid-item';
+    cell.style.backgroundColor = 'blue';
+    container.insertAdjacentElement('beforeend', cell);
   }
 }
 
-grid(16, 16);
+grid(16);
