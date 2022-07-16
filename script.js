@@ -8,7 +8,10 @@ function grid(size) {
   let num = size * size;
   for (let i = 0; i < num; i++) {
     let cell = document.createElement('div');
-    cell.style.backgroundColor = 'blue';
+    cell.style.backgroundColor = '#fff';
+    cell.addEventListener('mouseover', () => {
+      cell.style.backgroundColor = '#000';
+    });
     container.insertAdjacentElement('beforeend', cell);
   }
 }
