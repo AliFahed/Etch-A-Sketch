@@ -25,7 +25,6 @@ function changeGridSize(newGridSize) {
     createGrid(newGridSize);
   } else {
     sizeLimits.textContent = 'Size should be between 2 - 100.';
-    console.log("Maximum input is 100.");
   }
 }
 
