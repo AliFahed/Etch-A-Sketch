@@ -3,7 +3,7 @@ let defaultColor = 'black';
 function createGrid(size) {
   const container = document.querySelector('.container');
   const cells = container.querySelectorAll('div');
-  cells.forEach((div) => div.remove);
+  cells.forEach((div) => div.remove());
   container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
@@ -36,4 +36,10 @@ function colorCells() {
 
 function changeColorToUserChoice(userChoice) {
   defaultColor = userChoice;
+}
+
+function resetGrid() {
+  const container = document.querySelector('.container');
+  const cells = container.querySelectorAll('div');
+  cells.forEach((div) => div.style.backgroundColor = 'white');
 }
