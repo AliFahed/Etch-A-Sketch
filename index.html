@@ -21,16 +21,22 @@
     </div>
 
     <div class="setSize">
+      <label for="size">Set Squares size:</label>
       <input
         type="text"
         placeholder="Set size of grid"
         value="16"
+        id="size"
         onchange="changeGridSize(this.value)"
       />
       <button>Set Size</button>
     </div>
 
     <div class="sizeLimitsErrorMessage"></div>
+
+    <div class="footer">
+      Made by <a href="https://github.com/AliFahed/Etch-A-Sketch">AliFahed</a>
+    </div>
 
     <script src="script.js"></script>
   </body>
