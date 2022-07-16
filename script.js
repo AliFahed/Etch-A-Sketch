@@ -1,4 +1,6 @@
-function grid(size) {
+let defaultColor = 'black';
+
+function createGrid(size) {
   const container = document.querySelector('.container');
   const cells = container.querySelectorAll('div');
   cells.forEach((div) => div.remove);
@@ -8,20 +10,26 @@ function grid(size) {
   let num = size * size;
   for (let i = 0; i < num; i++) {
     let cell = document.createElement('div');
-    cell.style.backgroundColor = '#fff';
-    cell.addEventListener('mouseover', () => {
-      cell.style.backgroundColor = '#000';
-    });
+    cell.style.backgroundColor = 'white';
+    cell.addEventListener('mouseover', colorCells);
     container.insertAdjacentElement('beforeend', cell);
   }
 }
 
-grid(16);
+createGrid(16);
 
-function changeSize(newSize) {
-  if (newSize >= 2 && newSize <= 100) {
-    grid(newSize);
+function changeGridSize(newGridSize) {
+  if (newGridSize >= 2 && newGridSize <= 100) {
+    grid(newGridSize);
   } else {
     console.log("Maximum input is 100.");
   }
+}
+
+function colorCells() {
+  this.style.backgroundColor = defaultColor;
+}
+
+function changeColorToUserChoice(userChoice) {
+  defaultColor = userChoice;
 }
