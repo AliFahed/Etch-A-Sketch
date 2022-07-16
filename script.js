@@ -16,18 +16,22 @@ function createGrid(size) {
   }
 }
 
-createGrid(16);
+createGrid(16); // default grid 16 x 16
 
 function changeGridSize(newGridSize) {
   if (newGridSize >= 2 && newGridSize <= 100) {
-    grid(newGridSize);
+    createGrid(newGridSize);
   } else {
     console.log("Maximum input is 100.");
   }
 }
 
 function colorCells() {
-  this.style.backgroundColor = defaultColor;
+  if (defaultColor === 'random') {
+    this.style.backgroundColor = `hsl(${Math.random() *360}, 100%, 50%)`;
+  } else {
+    this.style.backgroundColor = defaultColor;
+  }
 }
 
 function changeColorToUserChoice(userChoice) {
