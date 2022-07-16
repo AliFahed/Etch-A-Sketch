@@ -34,10 +34,12 @@ h1 {
 }
 
 button {
+  margin: 2px 5px;
   padding: 10px 15px;
   border: 1px solid rgb(72, 71, 71);
   border-radius: 8px;
   font-size: 1rem;
+  font-weight: 600;
 }
 
 button[onclick="changeColorToUserChoice('black')"]:hover {
@@ -56,6 +58,11 @@ button[onclick="changeColorToUserChoice('white')"]:hover {
   border: none;
 }
 
+button[onclick="changeColorToUserChoice('random')"]:hover{
+  background: linear-gradient(red, orange, yellow, green, blue, violet);
+  color: white;
+}
+
 button[onclick="resetGrid()"]:hover {
   background: red;
   color: #fff;
@@ -64,4 +71,34 @@ button[onclick="resetGrid()"]:hover {
 .setSize> button:hover {
   background: #766262;
   color: #fff;
+}
+
+label {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+input {
+  margin-right: 15px;
+  font-size: 1.1rem;
+}
+
+.sizeLimitsErrorMessage {
+  font-size: 1.1rem;
+  color: rgb(238, 0, 0);
+  background: rgb(224, 175, 175);
+}
+
+.footer {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.footer a {
+  color: blue;
+}
+
+.footer a:hover {
+  color: purple;
 }
