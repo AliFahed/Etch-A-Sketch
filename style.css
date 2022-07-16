@@ -25,7 +25,6 @@ h1 {
   display: grid;
   width: 550px;
   height: 450px;
-  /* box-shadow: 10px 10px 5px #aaaaaa; */
   box-shadow: 4px 3px 4px 5px rgb(155, 153, 153);
 }
 
