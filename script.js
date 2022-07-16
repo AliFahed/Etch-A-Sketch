@@ -19,9 +19,12 @@ function createGrid(size) {
 createGrid(16); // default grid 16 x 16
 
 function changeGridSize(newGridSize) {
+  const sizeLimits = document.querySelector('.sizeLimitsErrorMessage');
   if (newGridSize >= 2 && newGridSize <= 100) {
+    sizeLimits.textContent = '';
     createGrid(newGridSize);
   } else {
+    sizeLimits.textContent = 'Size should be between 2 - 100.';
     console.log("Maximum input is 100.");
   }
 }
